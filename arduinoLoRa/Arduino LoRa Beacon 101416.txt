@@ -1,0 +1,54 @@
+
+SX1272 DIO5:ModeReady DIO4:CadDetected DIO3:CadDone DIO2: DIO1:RxTimeout DIO0:RxDone
+LoRa CodingRate:4/5 explicit Bw:125KHz sf:12 RxPayloadCrcOn:1 = no Tx CRC
+ModemStat:0x2f
+fifoptr=0x37 txbase=0x80 rxbase=0x00 payloadLength=0x01 maxlen=0xff
+IrqFlags:ValidHeader
+SymbTimeout:0x064 PreambleLength:8 rssi:-25dBm TxContinuousMode:0
+AgcAutoOn:1
+HeaderCount:92 PacketCount:87, Lora detection threshold:0a
+detect_trig_same_peaks_nb:5
+LowDataRateOptimize:1  invert: rx=0 tx=0
+
+PD2:0 version:0x22 907.400MHz rx txdac=5.0uA RFO pmax=10.8dBm OutputPower=10.8dBm OcpOn 100mA
+GPS enabled:0 MOTE_V3
+>
+IrqFlags:ValidHeader RxDone
+3620Hz CodingRate:4/5  crcOn 11.0dB  -34.0dBm
+000:00 fc 01 24 50 61 63 6b 65 74 20 32 2c 20 4c 6f
+016:52 61 20 42 65 61 63 6f 6e 20 64 65 20 57 41 32
+032:4b 57 52 00
+ü_$Packet 2, LoRa Beacon de WA2KWR
+
+IrqFlags:ValidHeader RxDone
+3621Hz CodingRate:4/5  crcOn 11.8dB  -34.0dBm
+000:08 fc 02 21 50 61 63 6b 65 74 20 31 2c 20 43 51
+016:20 43 51 20 43 51 20 64 65 20 57 41 32 4b 57 52
+032:00
+_ü_!Packet 1, CQ CQ CQ de WA2KWR
+
+
+
+>
+IrqFlags:ValidHeader RxDone
+3631Hz CodingRate:4/5  crcOn 11.8dB  -50.0dBm
+000:08 fc 00 21 50 61 63 6b 65 74 20 31 2c 20 43 51
+016:20 43 51 20 43 51 20 64 65 20 57 41 32 4b 57 52
+032:00
+ü!Packet 1, CQ CQ CQ de WA2KWR
+
+IrqFlags:ValidHeader RxDone
+3629Hz CodingRate:4/5  crcOn 9.5dB  -48.0dBm
+000:00 fc 01 3f 50 61 63 6b 65 74 20 32 2c 20 4c 6f
+016:52 61 20 42 65 61 63 6f 6e 20 64 65 20 57 41 32
+032:4b 57 52 2c 20 4d 6f 72 67 61 6e 20 48 69 6c 6c
+048:2c 20 43 41 20 39 35 30 33 37 20 55 53 41 00
+ü_?Packet 2, LoRa Beacon de WA2KWR, Morgan Hill, CA 95037 USA
+IrqFlags:ValidHeader RxDone
+3626Hz CodingRate:4/5  crcOn 9.0dB  -46.0dBm
+000:00 fc 02 32 50 61 63 6b 65 74 20 33 2c 20 4c 6f
+016:52 61 20 42 65 61 63 6f 6e 20 64 65 20 57 41 32
+032:4b 57 52 2c 20 47 72 69 64 3a 20 43 4d 39 37 65
+048:64 00
+ü_2Packet 3, LoRa Beacon de WA2KWR, Grid: CM97ed
+
