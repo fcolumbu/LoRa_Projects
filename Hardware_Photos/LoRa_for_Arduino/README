@@ -1,0 +1,1 @@
+The initial construction of my Arduino Amateur Radio LoRa beacon was done on an Adafruit Proto typing base. The Libelium Xbee LoRa module has an RP-SMA connector - note the use of an adapter to standard SMA.
