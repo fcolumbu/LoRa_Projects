@@ -1,0 +1,39 @@
+This is the expected output of the Arduino Serial Monitor from the Arduino configured as the beacon receiver.
+
+
+
+SX1272 module and Arduino: receive packets without ACK
+Setting power ON: state 0
+Setting Mode: state 0
+Setting Header ON: state 0
+Setting Channel: state 0
+Setting CRC ON: state 0
+Setting Power: state 0
+Setting node address: state 0
+SX1272 successfully configured
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 0
+Message: Packet 1, CQ CQ CQ de WA2KWR
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 0
+Message: Packet 3, LoRa Beacon de WA2KWR, Grid: CM97ed
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 0
+Message: Packet 2, LoRa Beacon de WA2KWR, Morgan Hill, CA 95037 USA
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 1
+Receive packet, state 0
+Message: Packet 1, CQ CQ CQ de WA2KWR
+Receive packet, state 1
+Receive packet, state 1
