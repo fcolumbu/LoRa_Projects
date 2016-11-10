@@ -20,6 +20,8 @@
  *  Version:           1.2
  *  Design:            David Gascón
  *  Implementation:    Covadonga Albiñana, Victor Boria, Ruben Martin
+ *  Modified by:       Francis M. Columbus, WA2KWR, for Amateur Radio beacon use
+ *                     and to fix compatibility problems with newer versions of the Arduino IDE
  */
 
 #include <Wire.h>
@@ -99,6 +101,7 @@ void loop(void)
     }
     Serial.print(F("Message: "));
     Serial.println(my_packet);
+    sx1272.getRSSIpacket();
   }
   else {
     Serial.print(F("Receive packet, state "));

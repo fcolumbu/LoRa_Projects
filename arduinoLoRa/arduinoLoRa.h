@@ -20,6 +20,8 @@
  *  Version:           1.4
  *  Design:            David Gascón 
  *  Implementation:    Covadonga Albiñana, Victor Boria, Ruben Martin
+ *	Modified by:	   Francis M. Columbus, WA2KWR, for Amateur Radio beacon use
+ *					   and to fix compatibility problems with newer versions of the Arduino IDE
  */
 
 
@@ -235,7 +237,7 @@ const uint8_t MAX_LENGTH_FSK = 64;
 const uint8_t MAX_PAYLOAD_FSK = 60;
 const uint8_t ACK_LENGTH = 5;
 const uint8_t OFFSET_PAYLOADLENGTH = 5;
-const uint8_t OFFSET_RSSI = 137;
+const uint8_t OFFSET_RSSI = 139;   // Corrected per the SX1272 datasheet page 112
 const uint8_t NOISE_FIGURE = 6.0;
 const uint8_t NOISE_ABSOLUTE_ZERO = 174.0;
 const uint16_t MAX_TIMEOUT = 8000;		//8000 msec = 8.0 sec

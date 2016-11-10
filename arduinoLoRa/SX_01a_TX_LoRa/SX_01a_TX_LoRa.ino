@@ -20,6 +20,8 @@
  *  Version:           1.2
  *  Design:            David Gascón
  *  Implementation:    Covadonga Albiñana, Victor Boria, Ruben Martin
+ *  Modified by:       Francis M. Columbus, WA2KWR, for Amateur Radio beacon use
+ *                     and to fix compatibility problems with newer versions of the Arduino IDE
  */
 
 #include <Wire.h>
@@ -43,7 +45,7 @@ char message3 [] = "Packet 2, LoRa Beacon de WA2KWR, Morgan Hill, CA 95037 USA";
 char message4 [] = "Packet 3, LoRa Beacon de WA2KWR, Grid: CM97ed"; 
 
 void setup()
-{
+{ 
   // Open serial communications and wait for port to open:
   Serial.begin(9600);
   
@@ -76,7 +78,7 @@ void setup()
   Serial.println(e, DEC);
   
   // Select output power (Max, High or Low)
-  e |= sx1272.setPower('H');
+  e |= sx1272.setPower('M');
   Serial.print(F("Setting Power: state "));
   Serial.println(e, DEC);
   
@@ -90,28 +92,34 @@ void setup()
     Serial.println(F("SX1272 successfully configured"));
   else
     Serial.println(F("SX1272 initialization failed"));
+
 }
 
 void loop(void)
 {
   // Send message1 and print the result
   e = sx1272.sendPacketTimeout(8, message0);
-  Serial.print(F("Packet sent, state "));
+  Serial.print(F("Packet 1 sent, state "));
   Serial.println(e, DEC);
+   Serial.println(message0);
+
 
   delay(15000);  
 
   // Send message2 broadcast and print the result
   e = sx1272.sendPacketTimeout(0, message3);
-  Serial.print(F("Packet sent, state "));
+  Serial.print(F("Packet 2 sent, state "));
   Serial.println(e, DEC);
+  Serial.println(message3);
 
+  
   delay(15000);
 
-   // Send message2 broadcast and print the result
+  // Send message3 broadcast and print the result
   e = sx1272.sendPacketTimeout(0, message4);
-  Serial.print(F("Packet sent, state "));
+  Serial.print(F("Packet 3 sent, state "));
   Serial.println(e, DEC);
+  Serial.println(message4);
 
   delay(15000);   
 }

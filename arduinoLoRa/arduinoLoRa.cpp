@@ -20,13 +20,15 @@
  *  Version:           1.4
  *  Design:            David Gascón 
  *  Implementation:    Covadonga Albiñana, Victor Boria, Ruben Martin
+ *	Modified by:	   Francis M. Columbus, WA2KWR, for Amateur Radio beacon use
+ *					   and to fix compatibility problems with newer versions of the Arduino IDE
  */
 
 //**********************************************************************
 // Includes
 //**********************************************************************
 #include "arduinoLoRa.h"
-#include <SPI.h>
+#include <SPI.h>   
 #include "../arduino-api/arduinoMultiprotocol.h"
 #include "../arduino-api/arduinoUtils.h"
 
@@ -2487,7 +2489,7 @@ uint8_t SX1272::getRSSI()
         // get mean value of RSSI
         for(int i = 0; i < total; i++)
         {
-            _RSSI = -OFFSET_RSSI + readRegister(REG_RSSI_VALUE_LORA);
+            _RSSI = -OFFSET_RSSI + readRegister(REG_RSSI_VALUE_LORA); 
             rssi_mean += _RSSI;         
         }
  
@@ -2497,7 +2499,7 @@ uint8_t SX1272::getRSSI()
         state = 0;
 	  #if (SX1272_debug_mode > 0)
 		  Serial.print(F("## RSSI value is "));
-		  Serial.print(_RSSI, DEC);
+		  Serial.print(_RSSI, DEC);      
 		  Serial.println(F(" ##"));
 		  Serial.println();
 	  #endif	 
@@ -2560,12 +2562,12 @@ int16_t SX1272::getRSSIpacket()
 			  _RSSIpacket = -OFFSET_RSSI + ( double )_RSSIpacket;
 			  state = 0;
 		  }
-	  #if (SX1272_debug_mode > 0)
+//	  #if (SX1272_debug_mode > 0)  // Modified by Frank Columbus
 		  Serial.print(F("## RSSI packet value is "));
 		  Serial.print(_RSSIpacket, DEC);
   		  Serial.println(F(" ##"));
 		  Serial.println();
-	  #endif
+//	  #endif
 	  }
   }
   else
