@@ -21,7 +21,7 @@
  *  Design:            David Gascón 
  *  Implementation:    Covadonga Albiñana, Victor Boria, Ruben Martin
  *	Modified by:	   Francis M. Columbus, WA2KWR, for Amateur Radio beacon use
- *					   and to fix compatibility problems with newer versions of the Arduino IDE
+ *			   and to fix compatibility problems with newer versions of the Arduino IDE
  */
 
 
